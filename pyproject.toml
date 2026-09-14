@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "tripnbond-packages"
+version = "0.1"
+description = "poetry installations of all packages dependencies in tripnbond"
+authors = ["Pablo Vieira"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.141.1"
+uvicorn = "^0.53.0"
+pydantic-settings = "^2.15.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
