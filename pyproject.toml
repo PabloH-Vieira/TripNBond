@@ -4,13 +4,23 @@ version = "0.1"
 description = "poetry installations of all packages dependencies in tripnbond"
 authors = ["Pablo Vieira"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.12"
 fastapi = "^0.141.1"
 uvicorn = "^0.53.0"
 pydantic-settings = "^2.15.0"
+sqlalchemy = "^2.0.53"
+alembic = "^1.20.0"
+psycopg2-binary = "^2.9.13"
 
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.16.7"
+pytest = "^9.1.1"
+pre-commit = "^4.6.2"
+httpx = "^0.28.1"
 
 [build-system]
 requires = ["poetry-core"]
