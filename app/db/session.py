@@ -6,7 +6,7 @@ from app.core.config import settings
 engine = create_engine(settings.DATABASE_URL)
 
 # Cria a fábrica de sessões (cada requisição gera uma)
-SessionLocal = sessionmaker(autocmmit=False, autoflush=False, bind=engine)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 # Base para criar as tabelas
 class Base(DeclarativeBase):
