@@ -1,5 +1,5 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import declarative_base, sessionmaker
+from sqlalchemy.orm import sessionmaker, DeclarativeBase
 from app.core.config import settings
 
 # Cria o motor de conexão usando a URL das configurações
@@ -9,7 +9,8 @@ engine = create_engine(settings.DATABASE_URL)
 SessionLocal = sessionmaker(autocmmit=False, autoflush=False, bind=engine)
 
 # Base para criar as tabelas
-Base = declarative_base
+class Base(DeclarativeBase):
+    pass
 
 # Função que injeta o banco de dados nas rotas do FastAPI
 def get_db():
